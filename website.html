@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animated Wave Around Photo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="menu-bar">
+      <div class="menu-content">
+        <div class="dropdown">
+          <class="dropbtn">Links
+          <div class="dropdown-content">
+            <a href="https://github.com/ZacharyCurrie">GitHub</a>
+            <a href="https://www.linkedin.com/in/zachary-currie-167780199">LinkedIn</a>
+          </div>
+        </div>
+        <div class="dropdown contact-dropdown">
+          <class="dropbtn">Contact Info
+          <div class="dropdown-content">
+            <a href="#phone">978-652-8327</a>
+            <a href="#email">zcurriesuf19@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wave-border">
+      <div class="wave">
+        <img src="profile1.png" alt="Your Photo">
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="text-box">
+        <p>I am a recent graduate of Suffolk University, specializing in computer science. With extensive knowledge in software development, particularly in languages such as Java, Python, and C++, I possess a strong background in coding. I am continually expanding my skills in coding techniques and operating systems to stay updated with the latest industry trends. During my academic journey, I actively collaborated with team members, applying problem-solving abilities and providing leadership to achieve successful outcomes. Now, as I pursue new job opportunities, I am determined to strengthen my future as a software developer and make valuable contributions to the field.</p>
+        <!-- Add your text content here -->
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="slideshow-container">
+        <div id="google" class="slide active">
+          <h2>Google Scholar Data Collector</h2>
+          <p6>The program is designed to automate the process of gathering scholars' information from Google Scholars and recording it in a CSV file. It utilizes web scraping techniques to extract scholars' names, IDs, and expertise from the Google Scholars website. By accessing the scholars' profiles, the program retrieves their relevant details, such as their names and unique IDs, and their areas of expertise. This information is then compiled and stored in a CSV file for easy access and reference. This program streamlines the task of collecting and organizing scholars' information, enabling efficient retrieval of valuable data for various academic purposes.</p6>
+          
+          <img src="mining.png" alt="mine" class="special-image"> 
+          
+        </div>
+        <div id="ping" class="slide">
+          <h2>Ping application using ICMP request and reply messages</h2>
+          <p6>The Ping application implemented in Python uses ICMP (Internet Control Message Protocol) request and reply messages to test the reachability of a host across an IP network. It measures the round-trip time, records packet loss, and provides statistical summaries of the received echo reply packets. The application sends ping requests to a specified host with a payload containing a timestamp and waits for a reply within one second. If no reply is received, it indicates potential network packet loss or server downtime.</p6>
+          <img src="ping.png" alt="ping" class="special-image" >
+
+        </div>
+        <div id="erlang" class="slide">
+          <h2>Erlang File Encryptor</h2>
+          <p6>The program in Erlang generates a file path and applies encryption and decryption operations to it. It allows for secure handling of file paths by ensuring their confidentiality. The program creates a random or specified file path and encrypts it using an encryption algorithm. This encrypted file path can then be safely stored or transmitted. When needed, the program can decrypt the encrypted file path, restoring it to its original form, enabling proper file access or further processing. The program provides a reliable and secure solution for managing file paths in Erlang applications.</p6>
+          <img src="erl.png" alt="erl" class="special-image" >
+
+        </div>
+        <div id="forest" class="slide">
+          <h2>Random Forest Classifier</h2>
+          <p6>The provided code utilizes a Random Forest Classifier to predict whether a given Stack Exchange question has an accepted answer. It leverages data by selecting any of the three datasets available. The predictive features, including Author_Rep, Question_Score, Number_Of_Views, Number_Of_Answers, Number_Of_Comments, and Edited, are used to train and test the classifier. The data is split into a 70:30 ratio for training and testing, and the code reports the corresponding training and testing scores, confusion matrices, and feature importances. The feature importances, obtained from the Random Forest Classifier, indicate the relative importance of each feature, with the highest and lowest values representing the most and least significant features respectively.</p6>
+          <img src="forest.png" alt="forest" class="special-image">
+
+        </div>
+        <div id="cruise" class="slide">
+          <h2>Cruise Line Front & Back Database</h2>
+          <p6>This cruiseline database allows the user to view multiple cruise line trips and register themselves into the database so that they can book their next dream vacation. Which then stores their data in a backend database using MySQL.
+          </p6>
+          <img src="cruise.png" alt="cruise" class="special-image" >
+
+        </div>
+        <!-- Add more slides with content here -->
+      </div>
+      <div class="slide-controls">
+        <button class="prev-slide-btn">Previous</button>
+        <button class="next-slide-btn">Next</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

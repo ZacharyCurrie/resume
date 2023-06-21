@@ -1,0 +1,226 @@
+.container {
+  display: contents;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 225px); /* Adjust the height to subtract the menu bar height */
+  overflow: hidden;
+  padding-top: -5px; /* Adjust the padding to add spacing below the menu bar */
+}
+
+.wave-border {
+  position: relative;
+  margin: 5.5% auto; /* Change margin-top to margin and remove margin-bottom */
+  width: 20vh;
+  height: 20vh;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.wave-border::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  z-index: -1;
+  animation: wave 3s linear infinite;
+}
+
+.wave img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  top: 50%; /* Change top and left to 50% */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Change translate values */
+  position: absolute;
+  margin: 0; /* Add this line to reset margin */
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wave-color {
+  0% {
+    border-color: rgb(255, 0, 0); /* Initial color */
+  }
+  100% {
+    border-color: rgb(var(--random-red), var(--random-green), var(--random-blue)); /* Random color */
+  }
+}
+
+.menu-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: hwb(0 95% 5%);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  z-index: 2; /* Ensure the menu bar is on top */
+}
+
+.menu-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0px; /* Add some padding for spacing */
+}
+
+.dropdown {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  margin-top: 0; /* Remove the margin-top */
+  white-space: nowrap;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ddd;
+}
+
+.contact-dropdown .dropdown-content {
+  left: auto; /* Reset the left positioning */
+  right: 0; /* Position the dropdown on the right */
+  transform: translateX(-100%); /* Flip the menu to the left */
+}
+
+.contact-dropdown:hover .dropdown-content {
+  left: auto; /* Reset the left positioning */
+  right: 0; /* Position the dropdown on the right */
+  transform: translateX(-0%); /* Flip the menu to the left */
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.text-box {
+  width: fit-content;
+  margin-top: -3.5%;
+  max-width: fit-content; /* Set a maximum width if needed */
+  height: fit-content;
+  max-height: fit-content;
+  background-color: #f1f1f1;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slide {
+  font-family: 'Courier New', Courier, monospace;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slideshow-container {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.special-image {
+  width: 55%;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  float: left;
+  position: absolute;
+}
+
+p6 {
+  float: right;
+  width: 60%;
+  text-align: left;
+  margin-right: -16%;
+  position: relative;
+  font-size: 1em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.slide-controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.prev-slide-btn,
+.next-slide-btn {
+  padding: 8px 16px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  margin: 0 5px;
+}
